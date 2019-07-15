@@ -29,9 +29,7 @@ with open('newsafr.json', encoding='utf-8') as newsafr_file:
                         for list_news in text:
                             for word in list_news:
                                 if len(word) >= 6:
-                                    all_words.append(word)
-
-
+                                    all_words.append(word.lower())
     text_counts = Counter(all_words)
     top_ten = text_counts.most_common(10)
     pprint(top_ten)

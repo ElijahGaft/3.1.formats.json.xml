@@ -12,7 +12,7 @@ for list_news in text:
     # print(list_news)
     for word in list_news:
         if len(word) >= 6:
-            all_words.append(word)
+            all_words.append(word.lower())
 # print(all_words)
 text_counts = Counter(all_words)
 top_ten = text_counts.most_common(10)
